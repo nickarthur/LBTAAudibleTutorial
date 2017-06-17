@@ -91,16 +91,28 @@ class LoginViewController: UIViewController, UICollectionViewDelegate, UICollect
             pageControlBottomAnchor?.constant = 40
             skipButtonTopAnchor?.constant = -40
             nextButtonTopAnchor?.constant = -40
+            
+            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+                self.pageControl.alpha = 0
+                self.skipButton.alpha = 0
+                self.nextButton.alpha = 0
+                self.view.layoutIfNeeded()
+            }, completion: nil)
         } else {
             // On any other page
             pageControlBottomAnchor?.constant = 0
             skipButtonTopAnchor?.constant = 16
             nextButtonTopAnchor?.constant = 16
+            
+            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+                self.pageControl.alpha = 1
+                self.skipButton.alpha = 1
+                self.nextButton.alpha = 1
+                self.view.layoutIfNeeded()
+            }, completion: nil)
         }
         
-        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
-            self.view.layoutIfNeeded()
-        }, completion: nil)
+        
     }
     
     fileprivate func registerCells() {
