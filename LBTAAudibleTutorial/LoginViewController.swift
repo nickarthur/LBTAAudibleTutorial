@@ -117,7 +117,7 @@ class LoginViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     fileprivate func registerCells() {
         collectionView.register(PageCell.self, forCellWithReuseIdentifier: cellId)
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: loginCellId)
+        collectionView.register(LoginCell.self, forCellWithReuseIdentifier: loginCellId)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

@@ -17,6 +17,7 @@
 		8F57AEC01EF52CA100EFA7B8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F57AEBF1EF52CA100EFA7B8 /* Constants.swift */; };
 		8F57AEC61EF5301D00EFA7B8 /* UIView+Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F57AEC51EF5301D00EFA7B8 /* UIView+Anchor.swift */; };
 		8F57AEC91EF530D400EFA7B8 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F57AEC81EF530D400EFA7B8 /* Page.swift */; };
+		8FE20DB21EF586370095907C /* LoginCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE20DB11EF586370095907C /* LoginCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		8F57AEBF1EF52CA100EFA7B8 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8F57AEC51EF5301D00EFA7B8 /* UIView+Anchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Anchor.swift"; sourceTree = "<group>"; };
 		8F57AEC81EF530D400EFA7B8 /* Page.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		8FE20DB11EF586370095907C /* LoginCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				8F57AEBD1EF52AAB00EFA7B8 /* PageCell.swift */,
+				8FE20DB11EF586370095907C /* LoginCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F57AEA01EF5244800EFA7B8 /* LoginViewController.swift in Sources */,
+				8FE20DB21EF586370095907C /* LoginCell.swift in Sources */,
 				8F57AE9E1EF5244800EFA7B8 /* AppDelegate.swift in Sources */,
 				8F57AEC91EF530D400EFA7B8 /* Page.swift in Sources */,
 				8F57AEBE1EF52AAB00EFA7B8 /* PageCell.swift in Sources */,
@@ -468,6 +472,7 @@
 				8F57AEB91EF5244800EFA7B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8F57AEBA1EF5244800EFA7B8 /* Build configuration list for PBXNativeTarget "LBTAAudibleTutorialTests" */ = {
 			isa = XCConfigurationList;
@@ -476,6 +481,7 @@
 				8F57AEBC1EF5244800EFA7B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

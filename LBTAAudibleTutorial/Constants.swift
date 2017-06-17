@@ -26,11 +26,14 @@ struct Constants {
             static let tutorial1 = "page1"
             static let tutorial2 = "page2"
             static let tutorial3 = "page3"
-
         }
     }
     
     struct Colors {
         static let orange = UIColor(red: 247/255, green: 154/255, blue: 27/255, alpha: 1)
+    }
+    
+    struct ImageNames {
+        static let logo = "logo"
     }
 }
