@@ -15,6 +15,7 @@ class LoginViewController: UIViewController, UICollectionViewDelegate, UICollect
         layout.scrollDirection = .horizontal
         layout.minimumLineSpacing = 0
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        cv.showsHorizontalScrollIndicator = false
         cv.backgroundColor = .white
         cv.delegate = self
         cv.dataSource = self
