@@ -26,11 +26,11 @@ extension UIView {
         }
         
         if let bottom = bottom {
-            bottomAnchor.constraint(equalTo: bottom, constant: bottomConstant).isActive = true
+            bottomAnchor.constraint(equalTo: bottom, constant: -bottomConstant).isActive = true
         }
         
         if let right = right {
-            rightAnchor.constraint(equalTo: right, constant: rightConstant).isActive = true
+            rightAnchor.constraint(equalTo: right, constant: -rightConstant).isActive = true
         }
     }
 }

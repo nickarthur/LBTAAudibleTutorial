@@ -16,6 +16,7 @@
 		8F57AEBE1EF52AAB00EFA7B8 /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F57AEBD1EF52AAB00EFA7B8 /* PageCell.swift */; };
 		8F57AEC01EF52CA100EFA7B8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F57AEBF1EF52CA100EFA7B8 /* Constants.swift */; };
 		8F57AEC61EF5301D00EFA7B8 /* UIView+Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F57AEC51EF5301D00EFA7B8 /* UIView+Anchor.swift */; };
+		8F57AEC91EF530D400EFA7B8 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F57AEC81EF530D400EFA7B8 /* Page.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		8F57AEBD1EF52AAB00EFA7B8 /* PageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
 		8F57AEBF1EF52CA100EFA7B8 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8F57AEC51EF5301D00EFA7B8 /* UIView+Anchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Anchor.swift"; sourceTree = "<group>"; };
+		8F57AEC81EF530D400EFA7B8 /* Page.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 			children = (
 				8F57AEBF1EF52CA100EFA7B8 /* Constants.swift */,
 				8F57AEC11EF52D7900EFA7B8 /* App flow */,
+				8F57AEC71EF530B500EFA7B8 /* Model and state */,
 				8F57AEC41EF52FF900EFA7B8 /* Extensions */,
 				8F57AE9D1EF5244800EFA7B8 /* AppDelegate.swift */,
 				8F57AEA41EF5244800EFA7B8 /* Assets.xcassets */,
@@ -135,6 +138,14 @@
 				8F57AEC51EF5301D00EFA7B8 /* UIView+Anchor.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		8F57AEC71EF530B500EFA7B8 /* Model and state */ = {
+			isa = PBXGroup;
+			children = (
+				8F57AEC81EF530D400EFA7B8 /* Page.swift */,
+			);
+			name = "Model and state";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +255,7 @@
 			files = (
 				8F57AEA01EF5244800EFA7B8 /* LoginViewController.swift in Sources */,
 				8F57AE9E1EF5244800EFA7B8 /* AppDelegate.swift in Sources */,
+				8F57AEC91EF530D400EFA7B8 /* Page.swift in Sources */,
 				8F57AEBE1EF52AAB00EFA7B8 /* PageCell.swift in Sources */,
 				8F57AEC01EF52CA100EFA7B8 /* Constants.swift in Sources */,
 				8F57AEC61EF5301D00EFA7B8 /* UIView+Anchor.swift in Sources */,
