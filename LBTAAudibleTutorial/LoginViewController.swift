@@ -31,10 +31,29 @@ class LoginViewController: UIViewController, UICollectionViewDelegate, UICollect
         return [firstPage, secondPage, thirdPage]
     }()
     
+    let skipButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Skip", for: .normal)
+        button.setTitleColor(Constants.Colors.orange, for: .normal)
+        return button
+    }()
+    
+    let nextButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Next", for: .normal)
+        button.setTitleColor(Constants.Colors.orange, for: .normal)
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.addSubview(collectionView)
+        view.addSubview(skipButton)
+        view.addSubview(nextButton)
+        
+        skipButton.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: nil, topConstant: 16, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 60, heightConstant: 50)
+        nextButton.anchor(view.topAnchor, left: nil, bottom: nil, right: view.rightAnchor, topConstant: 16, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 60, heightConstant: 50)
         
         collectionView.fillSuperview()
         collectionView.register(PageCell.self, forCellWithReuseIdentifier: cellId)

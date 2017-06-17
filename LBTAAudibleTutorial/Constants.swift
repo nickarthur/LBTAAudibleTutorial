@@ -6,6 +6,8 @@
 //  Copyright © 2017 Kevin Quisquater. All rights reserved.
 //
 
+import UIKit
+
 struct Constants {
     struct Tutorials {
         struct Titles {
@@ -26,5 +28,9 @@ struct Constants {
             static let tutorial3 = "page3"
 
         }
+    }
+    
+    struct Colors {
+        static let orange = UIColor(red: 247/255, green: 154/255, blue: 27/255, alpha: 1)
     }
 }
