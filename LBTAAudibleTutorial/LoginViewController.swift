@@ -61,6 +61,10 @@ class LoginViewController: UIViewController, UICollectionViewDelegate, UICollect
         return button
     }()
     
+    var pageControlBottomAnchor: NSLayoutConstraint?
+    var skipButtonTopAnchor: NSLayoutConstraint?
+    var nextButtonTopAnchor: NSLayoutConstraint?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -69,19 +73,34 @@ class LoginViewController: UIViewController, UICollectionViewDelegate, UICollect
         view.addSubview(skipButton)
         view.addSubview(nextButton)
         
-        pageControl.anchor(nil, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 40)
+        pageControlBottomAnchor = pageControl.anchorWithReturnAnchors(nil, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 40)[1]
         
-        skipButton.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: nil, topConstant: 16, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 60, heightConstant: 50)
-        nextButton.anchor(view.topAnchor, left: nil, bottom: nil, right: view.rightAnchor, topConstant: 16, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 60, heightConstant: 50)
+        skipButtonTopAnchor = skipButton.anchorWithReturnAnchors(view.topAnchor, left: view.leftAnchor, bottom: nil, right: nil, topConstant: 16, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 60, heightConstant: 50).first
+        nextButtonTopAnchor = nextButton.anchorWithReturnAnchors(view.topAnchor, left: nil, bottom: nil, right: view.rightAnchor, topConstant: 16, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 60, heightConstant: 50).first
         
         collectionView.fillSuperview()
         registerCells()
     }
     
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        let pageNumber = Int(targetContentOffset.pointee.x / view.frame.width)
+        pageControl.currentPage = pageNumber
         
+        // Last page
+        if pageNumber == pages.count {
+            pageControlBottomAnchor?.constant = 40
+            skipButtonTopAnchor?.constant = -40
+            nextButtonTopAnchor?.constant = -40
+        } else {
+            // On any other page
+            pageControlBottomAnchor?.constant = 0
+            skipButtonTopAnchor?.constant = 16
+            nextButtonTopAnchor?.constant = 16
+        }
         
-        pageControl.currentPage = Int(targetContentOffset.pointee.x / view.frame.width)
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+            self.view.layoutIfNeeded()
+        }, completion: nil)
     }
     
     fileprivate func registerCells() {
