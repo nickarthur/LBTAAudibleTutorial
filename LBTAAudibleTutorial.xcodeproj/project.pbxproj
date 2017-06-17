@@ -18,6 +18,7 @@
 		8F57AEC61EF5301D00EFA7B8 /* UIView+Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F57AEC51EF5301D00EFA7B8 /* UIView+Anchor.swift */; };
 		8F57AEC91EF530D400EFA7B8 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F57AEC81EF530D400EFA7B8 /* Page.swift */; };
 		8FE20DB21EF586370095907C /* LoginCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE20DB11EF586370095907C /* LoginCell.swift */; };
+		8FE20DB51EF58CBA0095907C /* KeyboardNotificable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE20DB41EF58CBA0095907C /* KeyboardNotificable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		8F57AEC51EF5301D00EFA7B8 /* UIView+Anchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Anchor.swift"; sourceTree = "<group>"; };
 		8F57AEC81EF530D400EFA7B8 /* Page.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		8FE20DB11EF586370095907C /* LoginCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCell.swift; sourceTree = "<group>"; };
+		8FE20DB41EF58CBA0095907C /* KeyboardNotificable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardNotificable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				8F57AEBF1EF52CA100EFA7B8 /* Constants.swift */,
 				8F57AEC11EF52D7900EFA7B8 /* App flow */,
 				8F57AEC71EF530B500EFA7B8 /* Model and state */,
+				8FE20DB31EF58C9E0095907C /* Protocols */,
 				8F57AEC41EF52FF900EFA7B8 /* Extensions */,
 				8F57AE9D1EF5244800EFA7B8 /* AppDelegate.swift */,
 				8F57AEA41EF5244800EFA7B8 /* Assets.xcassets */,
@@ -149,6 +152,14 @@
 				8F57AEC81EF530D400EFA7B8 /* Page.swift */,
 			);
 			name = "Model and state";
+			sourceTree = "<group>";
+		};
+		8FE20DB31EF58C9E0095907C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8FE20DB41EF58CBA0095907C /* KeyboardNotificable.swift */,
+			);
+			name = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +272,7 @@
 				8F57AE9E1EF5244800EFA7B8 /* AppDelegate.swift in Sources */,
 				8F57AEC91EF530D400EFA7B8 /* Page.swift in Sources */,
 				8F57AEBE1EF52AAB00EFA7B8 /* PageCell.swift in Sources */,
+				8FE20DB51EF58CBA0095907C /* KeyboardNotificable.swift in Sources */,
 				8F57AEC01EF52CA100EFA7B8 /* Constants.swift in Sources */,
 				8F57AEC61EF5301D00EFA7B8 /* UIView+Anchor.swift in Sources */,
 			);

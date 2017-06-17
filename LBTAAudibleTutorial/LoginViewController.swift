@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class LoginViewController: UIViewController, KeyboardNotificable, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -73,6 +73,8 @@ class LoginViewController: UIViewController, UICollectionViewDelegate, UICollect
         view.addSubview(skipButton)
         view.addSubview(nextButton)
         
+        registerForKeyboardNotifications()
+        
         pageControlBottomAnchor = pageControl.anchorWithReturnAnchors(nil, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 40)[1]
         
         skipButtonTopAnchor = skipButton.anchorWithReturnAnchors(view.topAnchor, left: view.leftAnchor, bottom: nil, right: nil, topConstant: 16, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 60, heightConstant: 50).first
@@ -80,6 +82,18 @@ class LoginViewController: UIViewController, UICollectionViewDelegate, UICollect
         
         collectionView.fillSuperview()
         registerCells()
+    }
+    
+    func keyboardWillShow(notification: Notification) {
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: { 
+            self.view.frame = CGRect(x: 0, y: -50, width: self.view.frame.width, height: self.view.frame.height)
+        }, completion: nil)
+    }
+    
+    func keyboardWillHide(notification: Notification) {
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+            self.view.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
+        }, completion: nil)
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
