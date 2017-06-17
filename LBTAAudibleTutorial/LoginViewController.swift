@@ -36,7 +36,7 @@ class LoginViewController: UIViewController, UICollectionViewDelegate, UICollect
         
         view.addSubview(collectionView)
         
-        collectionView.anchorToTop(top: view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor)
+        collectionView.anchorTo(top: view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor)
         collectionView.register(PageCell.self, forCellWithReuseIdentifier: cellId)
     }
     
