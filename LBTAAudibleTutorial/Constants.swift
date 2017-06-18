@@ -41,4 +41,8 @@ struct Constants {
     struct ViewControllersTitles {
         static let home = "Home"
     }
+    
+    struct UserDefaultsKeys {
+        static let isLoggedIn = "isLoggedIn"
+    }
 }

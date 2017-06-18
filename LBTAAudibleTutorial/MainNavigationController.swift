@@ -23,7 +23,7 @@ class MainNavigationController: UINavigationController {
     }
     
     fileprivate func isLoggedIn() -> Bool {
-        return false
+        return UserDefaults.standard.isLoggedIn()
     }
     
     func showLoginController() {
@@ -32,17 +32,5 @@ class MainNavigationController: UINavigationController {
         present(loginViewController, animated: true, completion: {
             
         })
-    }
-}
-
-class HomeController: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        title = Constants.ViewControllersTitles.home
-        
-        let imageView = UIImageView(image: UIImage(named: Constants.ImageNames.homeScreenshot))
-        view.addSubview(imageView)
-        imageView.anchor(view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, topConstant: 64, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
     }
 }

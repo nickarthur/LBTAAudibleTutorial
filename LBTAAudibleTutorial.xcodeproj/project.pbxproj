@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8F4327111EF6F58E000B788A /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4327101EF6F58E000B788A /* MainNavigationController.swift */; };
+		8F4327131EF7292E000B788A /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4327121EF7292E000B788A /* HomeController.swift */; };
+		8F4327151EF72A72000B788A /* UserDefaults+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4327141EF72A72000B788A /* UserDefaults+Helpers.swift */; };
 		8F57AE9E1EF5244800EFA7B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F57AE9D1EF5244800EFA7B8 /* AppDelegate.swift */; };
 		8F57AEA01EF5244800EFA7B8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F57AE9F1EF5244800EFA7B8 /* LoginViewController.swift */; };
 		8F57AEA31EF5244800EFA7B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F57AEA11EF5244800EFA7B8 /* Main.storyboard */; };
@@ -34,6 +36,8 @@
 
 /* Begin PBXFileReference section */
 		8F4327101EF6F58E000B788A /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		8F4327121EF7292E000B788A /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		8F4327141EF72A72000B788A /* UserDefaults+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Helpers.swift"; sourceTree = "<group>"; };
 		8F57AE9A1EF5244800EFA7B8 /* LBTAAudibleTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LBTAAudibleTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F57AE9D1EF5244800EFA7B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F57AE9F1EF5244800EFA7B8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -117,8 +121,9 @@
 		8F57AEC11EF52D7900EFA7B8 /* App flow */ = {
 			isa = PBXGroup;
 			children = (
-				8F57AEC21EF52D8100EFA7B8 /* Login */,
 				8F4327101EF6F58E000B788A /* MainNavigationController.swift */,
+				8F4327121EF7292E000B788A /* HomeController.swift */,
+				8F57AEC21EF52D8100EFA7B8 /* Login */,
 			);
 			name = "App flow";
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				8F57AEC51EF5301D00EFA7B8 /* UIView+Anchor.swift */,
+				8F4327141EF72A72000B788A /* UserDefaults+Helpers.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -274,6 +280,8 @@
 				8F57AEA01EF5244800EFA7B8 /* LoginViewController.swift in Sources */,
 				8FE20DB21EF586370095907C /* LoginCell.swift in Sources */,
 				8F57AE9E1EF5244800EFA7B8 /* AppDelegate.swift in Sources */,
+				8F4327131EF7292E000B788A /* HomeController.swift in Sources */,
+				8F4327151EF72A72000B788A /* UserDefaults+Helpers.swift in Sources */,
 				8F57AEC91EF530D400EFA7B8 /* Page.swift in Sources */,
 				8F57AEBE1EF52AAB00EFA7B8 /* PageCell.swift in Sources */,
 				8FE20DB51EF58CBA0095907C /* KeyboardNotificable.swift in Sources */,

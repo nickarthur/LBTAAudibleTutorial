@@ -178,6 +178,8 @@ class LoginViewController: UIViewController, UICollectionViewDelegate, UICollect
         
         mainNavigationController.viewControllers = [HomeController()]
         
+        UserDefaults.standard.setIsLoggedIn(value: true)
+        
         dismiss(animated: true, completion: nil)
     }
     
