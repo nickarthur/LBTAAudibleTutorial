@@ -51,8 +51,14 @@ class LoginViewController: UIViewController, KeyboardNotificable, UICollectionVi
         let button = UIButton(type: .system)
         button.setTitle("Skip", for: .normal)
         button.setTitleColor(Constants.Colors.orange, for: .normal)
+        button.addTarget(self, action: #selector(skip), for: .touchUpInside)
         return button
     }()
+    
+    func skip() {
+        pageControl.currentPage = pages.count - 1
+        nextPage()
+    }
     
     let nextButton: UIButton = {
         let button = UIButton(type: .system)
