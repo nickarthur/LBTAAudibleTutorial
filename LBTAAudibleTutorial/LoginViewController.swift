@@ -58,8 +58,25 @@ class LoginViewController: UIViewController, KeyboardNotificable, UICollectionVi
         let button = UIButton(type: .system)
         button.setTitle("Next", for: .normal)
         button.setTitleColor(Constants.Colors.orange, for: .normal)
+        button.addTarget(self, action: #selector(nextPage), for: .touchUpInside)
         return button
     }()
+    
+    func nextPage() {
+        // Is on the last page
+        if pageControl.currentPage == pages.count {
+            return
+        }
+        
+        // Is on the second last page
+        if pageControl.currentPage == pages.count - 1 {
+            moveControlConstraintsOffScreen()
+        }
+        
+        let indexPath = IndexPath(item: pageControl.currentPage + 1, section: 0)
+        collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+        pageControl.currentPage += 1
+    }
     
     var pageControlBottomAnchor: NSLayoutConstraint?
     var skipButtonTopAnchor: NSLayoutConstraint?
@@ -106,31 +123,37 @@ class LoginViewController: UIViewController, KeyboardNotificable, UICollectionVi
         
         // Last page
         if pageNumber == pages.count {
-            pageControlBottomAnchor?.constant = 40
-            skipButtonTopAnchor?.constant = -40
-            nextButtonTopAnchor?.constant = -40
-            
-            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
-                self.pageControl.alpha = 0
-                self.skipButton.alpha = 0
-                self.nextButton.alpha = 0
-                self.view.layoutIfNeeded()
-            }, completion: nil)
+            moveControlConstraintsOffScreen()
         } else {
             // On any other page
-            pageControlBottomAnchor?.constant = 0
-            skipButtonTopAnchor?.constant = 16
-            nextButtonTopAnchor?.constant = 16
-            
-            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
-                self.pageControl.alpha = 1
-                self.skipButton.alpha = 1
-                self.nextButton.alpha = 1
-                self.view.layoutIfNeeded()
-            }, completion: nil)
+            moveControlConstraintsOnScreen()
         }
+    }
+    
+    fileprivate func moveControlConstraintsOffScreen() {
+        pageControlBottomAnchor?.constant = 40
+        skipButtonTopAnchor?.constant = -40
+        nextButtonTopAnchor?.constant = -40
         
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+            self.pageControl.alpha = 0
+            self.skipButton.alpha = 0
+            self.nextButton.alpha = 0
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+    }
+    
+    fileprivate func moveControlConstraintsOnScreen() {
+        pageControlBottomAnchor?.constant = 0
+        skipButtonTopAnchor?.constant = 16
+        nextButtonTopAnchor?.constant = 16
         
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+            self.pageControl.alpha = 1
+            self.skipButton.alpha = 1
+            self.nextButton.alpha = 1
+            self.view.layoutIfNeeded()
+        }, completion: nil)
     }
     
     fileprivate func registerCells() {
