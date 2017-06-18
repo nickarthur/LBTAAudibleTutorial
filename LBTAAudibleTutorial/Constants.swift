@@ -35,5 +35,10 @@ struct Constants {
     
     struct ImageNames {
         static let logo = "logo"
+        static let homeScreenshot = "home"
+    }
+    
+    struct ViewControllersTitles {
+        static let home = "Home"
     }
 }
